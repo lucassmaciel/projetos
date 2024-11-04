@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Criando classes</title>
+    </head>
+    <body>
+        <h1> Criação de classes</h1>
+        <p> Criando 2 objetos a partir de uma classe</p>
+
+        <p id="demo"></p>
+
+        <script>
+            class Car{
+                constructor(name, year){
+                    this.name = name
+                    this.year = year
+                }
+                age(){
+                    const date = new Date()
+                    return date.getFullYear() - this.year
+                }
+            }
+
+            const myCar1 = new Car("Ford", 2014)
+            const myCar2 = new Car("Audi", 2019)
+
+            document.getElementById("demo").innerHTML = myCar1.name + " " +
+            myCar1.year + " tem idade de " + myCar1.age() + " anos"
+        </script>
+    </body>
+</html>

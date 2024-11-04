@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conta Bancária</title>
+</head>
+<body>
+    <h1>Conta Bancária</h1>
+    <p>Verifique o saldo da sua conta no console ou via alert.</p>
+
+    <script>
+        class Conta {
+            constructor() {
+                this.saldo = 0;
+            }
+
+            setSaldo(valor) {
+                this.saldo = valor;
+            }
+
+            getSaldo() {
+                return this.saldo;
+            }
+        }
+
+        const minhaConta = new Conta();
+        minhaConta.setSaldo(1000);
+
+        console.log("O saldo da conta é: " + minhaConta.getSaldo());
+        alert("O saldo da conta é: " + minhaConta.getSaldo());
+    </script>
+</body>
+</html>

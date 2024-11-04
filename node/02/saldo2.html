@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conta Bancária</title>
+</head>
+<body>
+    <h1>Conta Bancária</h1>
+    <p>Verifique o saldo da sua conta no console ou via alert.</p>
+
+    <script>
+        class Conta {
+            constructor(dono) {
+                this.dono = dono;
+                this.saldo = 0;
+            }
+
+            setSaldo(valor) {
+                if (valor < 0) {
+                    this.saldo = 0;
+                } else {
+                    this.saldo = valor;
+                }
+            }
+
+            getSaldo() {
+                return this.saldo;
+            }
+        }
+
+        const nomeDono = prompt("Digite o nome do dono da conta:");
+        let saldoInicial = parseFloat(prompt("Digite o saldo inicial da conta:"));
+
+        const minhaConta = new Conta(nomeDono);
+        minhaConta.setSaldo(saldoInicial);
+
+        console.log("O saldo da conta de " + minhaConta.dono + " é: " + minhaConta.getSaldo());
+
+        alert("O saldo da conta de " + minhaConta.dono + " é: " + minhaConta.getSaldo());
+    </script>
+</body>
+</html>
